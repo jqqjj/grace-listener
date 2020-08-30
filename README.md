@@ -1,5 +1,5 @@
 # graceful
-A simple package for creating socket listeners to restart the server gracefully.
+A simple package for creating socket listeners to restart servers gracefully.
 
 ## Usage
 
