@@ -1,4 +1,4 @@
-module grace-listener
+module graceful
 
 go 1.14
 
