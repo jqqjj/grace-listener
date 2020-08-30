@@ -3,7 +3,12 @@ A simple package for creating socket listeners to restart servers gracefully.
 
 ## Usage
 
-http package:
+Installation
+```go
+import "github.com/jqqjj/graceful"
+```
+
+Use in http package:
 ```go
 ln, err := graceful.NewGraceListener(":8080")
 if err != nil {
@@ -12,7 +17,7 @@ if err != nil {
 http.Serve(ln, nil)
 ```
 
-gin framework:
+use in gin framework:
 ```go
 ln, err := graceful.NewGraceListener(":8080")
 if err != nil {
