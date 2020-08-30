@@ -26,12 +26,12 @@ router.GET("/", func(c *gin.Context) {
 router.RunListener(ln)
 ```
 
-## Restart command:
+## Restart command gracefully:
 ```shell
 kill -HUP PID
 ```
 
-## Run in background
+## Run as a daemon
 ```shell
 ./mygraceapp -daemon
 ```
