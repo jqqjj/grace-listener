@@ -1,4 +1,4 @@
-module graceful
+module github.com/jqqjj/graceful
 
 go 1.14
 
