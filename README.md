@@ -41,5 +41,10 @@ kill -HUP PID
 ## Run Args:
 * **daemon** &nbsp;&nbsp; Run app as a daemon
 
+## Features
+* Will not close connections including http actively.
+* Old process will not exit until all connections are completed and closed.
+* Restart gracefully is not implemented on windows but you can develop and run your business codes on it.
+
 ## Thanks:
 * [mitchellh/go-ps](https://github.com/mitchellh/go-ps) &nbsp;&nbsp; Find, list, and inspect processes from Go (golang).
