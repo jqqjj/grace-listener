@@ -1,14 +1,16 @@
 # graceful
 A simple package for creating socket listeners to restart servers gracefully.
 
-## Usage
-
-Installation
+## Installation
+Import the package by using go mod:
 ```go
 import "github.com/jqqjj/graceful"
 ```
 
-Use in http package:
+
+## Usage
+
+Use in net/http:
 ```go
 ln, err := graceful.NewGraceListener(":8080")
 if err != nil {
@@ -17,7 +19,7 @@ if err != nil {
 http.Serve(ln, nil)
 ```
 
-use in gin framework:
+Use in gin framework:
 ```go
 ln, err := graceful.NewGraceListener(":8080")
 if err != nil {
@@ -31,15 +33,13 @@ router.GET("/", func(c *gin.Context) {
 router.RunListener(ln)
 ```
 
-## Restart command gracefully:
+## Graceful restart:
 ```shell
 kill -HUP PID
 ```
 
-## Run as a daemon
-```shell
-./mygraceapp -daemon
-```
+## Run Args:
+* **daemon** &nbsp;&nbsp; Run app as a daemon
 
 ## Thanks:
 * [mitchellh/go-ps](https://github.com/mitchellh/go-ps) &nbsp;&nbsp; Find, list, and inspect processes from Go (golang).
